@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.comics {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.comics a {
+  color: inherit;
+  text-decoration: none;
+  width: calc(100%/6 - 20px);
+  padding-top: 10px;
+}
+
+.comics a .card {
+  text-align: center;
+}
+
+.comics a .card h2 {
+  font-size: 0.7em;
+}
+
+.comic {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.comic img {
+  width: 10%;
+}
+
+.comic h1 {
+  padding-top: 10px;
+}
+
+.comic .text {
+  display: flex;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+.comic .text p {
+  width: 70%;
+}
+
+.comic .text .details {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.comic .text .details .price {
+  font-size: 2em;
+  color: green;
+}
+
