@@ -6,25 +6,103 @@
 }
 
 .comics {
-  width: 100vw;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.comics a {
+.comics .img_title {
+  text-align: center;
+  width: calc(100% / 6);
+  margin: 20px 20px;
+}
+
+.comics .img_title .comics-details {
+  position: relative;
+}
+
+.comics .img_title .comics-details img {
+  width: 100%;
+}
+
+.comics .img_title .comics-details .options {
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.comics .img_title .comics-details .options a.edit,
+.comics .img_title .comics-details .options a.link-comic,
+.comics .img_title .comics-details .options form button i {
+  display: none;
+}
+
+.comics .img_title .comics-details:hover .options {
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.comics .img_title .comics-details:hover a.edit {
+  display: block;
+  color: #1df500;
+  font-size: 1.6em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.comics .img_title .comics-details:hover form button i {
+  cursor: pointer;
+  display: block;
+  color: #d40000;
+  font-size: 1.6em;
+  position: absolute;
+  top: 50px;
+  right: 17px;
+}
+
+.comics .img_title .comics-details:hover a.link-comic {
+  height: 100%;
   color: inherit;
   text-decoration: none;
-  width: calc(100%/6 - 20px);
-  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.comics a .card {
-  text-align: center;
+.comics .img_title .comics-details:hover a.link-comic span {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 35px 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.747);
 }
 
-.comics a .card h2 {
-  font-size: 0.7em;
+.comics .img_title h2 {
+  font-size: 0.8em;
+}
+
+.comics .add-comic {
+  margin: 40px 20px;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.comics .add-comic a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.747);
 }
 
 .comic {
