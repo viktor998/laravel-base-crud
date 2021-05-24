@@ -19380,6 +19380,14 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var comics_delete = new Vue({
+  el: '#options',
+  data: {
+    clicked: false,
+    comic_id: ""
+  }
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

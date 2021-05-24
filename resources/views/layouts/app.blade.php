@@ -11,4 +11,7 @@
 <body>
     @yield('main')
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="/js/app.js"></script>
 </html>

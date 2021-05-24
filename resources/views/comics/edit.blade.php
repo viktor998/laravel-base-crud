@@ -1,4 +1,21 @@
-<form action="{{route('comics.update', ['comic'=>$comic->id])}}" method="post">
+@extends('layouts.app')
+
+
+@section('main')
+
+
+<div class="form-container">
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<form class='edit' action="{{route('comics.update', ['comic'=>$comic->id])}}" method="post">
     @csrf
     @method('PUT')
     <input type="text" name="title" value="{{$comic->title}}" placeholder='title'>
@@ -10,3 +27,6 @@
     <input type="text" name="type" value="{{$comic->type}}" placeholder='type'>
     <input type="submit" value="Update">
 </form>
+</div>
+
+@endsection

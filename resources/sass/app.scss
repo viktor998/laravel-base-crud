@@ -11,6 +11,45 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+
+    .delete{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0px 11px -1px #000000;
+        height: 150px;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .buttons{
+            margin-left: auto;
+            justify-self: end;
+            
+            input{
+                padding: 5px 8px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .green{
+                background-color: green;
+                color: white;
+                font-weight: bold;
+            }
+
+            .red{
+                background-color: red;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
     
     .img_title{
 
@@ -31,7 +70,7 @@
                 top: 0;
                 left: 0;
 
-                a.edit, a.link-comic, form button i{
+                a.edit, a.link-comic, .remove i{
                     display: none;   
                     
                 }
@@ -51,7 +90,7 @@
                     
                 }
 
-                form button i{
+                .remove i{
                     cursor: pointer;
                     display: block;
                     color: rgb(212, 0, 0);
@@ -142,5 +181,25 @@
                 color: green;
             }
         }
+    }
+
+
+}
+
+
+.form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form.create, form.edit{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+        height: 250px;
+        flex-wrap: wrap;
     }
 }

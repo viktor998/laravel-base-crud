@@ -12,6 +12,46 @@
   flex-wrap: wrap;
 }
 
+.comics .delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 11px -1px #000000;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.comics .delete .buttons {
+  margin-left: auto;
+  justify-self: end;
+}
+
+.comics .delete .buttons input {
+  padding: 5px 8px;
+}
+
+.comics .delete .buttons input:hover {
+  cursor: pointer;
+}
+
+.comics .delete .buttons .green {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.comics .delete .buttons .red {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
 .comics .img_title {
   text-align: center;
   width: calc(100% / 6);
@@ -36,7 +76,7 @@
 
 .comics .img_title .comics-details .options a.edit,
 .comics .img_title .comics-details .options a.link-comic,
-.comics .img_title .comics-details .options form button i {
+.comics .img_title .comics-details .options .remove i {
   display: none;
 }
 
@@ -53,7 +93,7 @@
   right: 10px;
 }
 
-.comics .img_title .comics-details:hover form button i {
+.comics .img_title .comics-details:hover .remove i {
   cursor: pointer;
   display: block;
   color: #d40000;
@@ -140,5 +180,23 @@
 .comic .text .details .price {
   font-size: 2em;
   color: green;
+}
+
+.form-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form.create,
+.form-container form.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 250px;
+  flex-wrap: wrap;
 }
 
